@@ -1,0 +1,6 @@
+#requirements.txt
+
+requirements
+beaultifulsoup4
+click
+

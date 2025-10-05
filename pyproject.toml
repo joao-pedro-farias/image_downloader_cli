@@ -1,17 +1,39 @@
+# pyproject.toml (Versão Corrigida e Completa )
+
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "imgdown"
-dynamic = ["version"]
-description = "Async image downloader CLI tool"
+version = "1.0.0"
 authors = [
-    {name = "Seu Nome", email = "seu@email.com"},
+  { name="João Pedro Farias", email="joaopedro.esf@gmail.com" }, # Coloque seu email aqui
 ]
-dependencies = [
-    "aiohttp>=3.8.0",
+description = "Um baixador de imagens assíncrono via linha de comando."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text="MIT License" } # Ou aponte para um arquivo: { file="LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities",
+    "Topic :: Terminals",
 ]
 
+# Dependências do projeto - substitui o requirements.txt
+dependencies = [
+    "aiohttp",
+    "beautifulsoup4", # Adicionei a dependência que faltava
+    "click"           # Adicionei a dependência que faltava
+]
+
+[project.urls]
+"Homepage" = "https://github.com/joao-pedro-farias/image_downloader_cli"
+"Bug Tracker" = "https://github.com/joao-pedro-farias/image_downloader_cli/issues"
+
+# Ponto de entrada - cria o comando "imgdown" no terminal
 [project.scripts]
 imgdown = "imgdown.cli:main"
+

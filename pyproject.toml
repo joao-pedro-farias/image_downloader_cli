@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imgdown"
+dynamic = ["version"]
+description = "Async image downloader CLI tool"
+authors = [
+    {name = "Seu Nome", email = "seu@email.com"},
+]
+dependencies = [
+    "aiohttp>=3.8.0",
+]
+
+[project.scripts]
+imgdown = "imgdown.cli:main"

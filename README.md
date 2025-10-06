@@ -6,9 +6,6 @@
 
 A fast and powerful asynchronous image downloader for your command line. Download hundreds of images in seconds, not minutes.
 
-![imgdown Usage Demonstration](https://i.imgur.com/TqBw1aF.gif )
-*(Illustrative usage GIF)*
-
 ## ✨ Features
 
 *   **Extremely Fast:** Uses `asyncio` and `aiohttp` to perform dozens of concurrent downloads.
